@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hilang Menyentuh Dasar</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FLOATING LIGHT -->
+  <div class="floating-light"></div>
+
+  <!-- BUBBLES -->
+  <div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <h1>Hilang Menyentuh Dasar</h1>
+
+    <ul>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#sample">Sample</a></li>
+      <li><a href="#playlist">Playlist</a></li>
+      <li><a href="#beli">Beli</a></li>
+      <li><a href="#penulis">Penulis</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-left">
+
+      <p class="small">SEBUAH NOVEL</p>
+
+      <h2>
+        Hilang<br>
+        Menyentuh<br>
+        Dasar
+      </h2>
+
+      <p class="quote">
+        “Semakin dalam aku tenggelam, semakin jelas aku
+        mengenali siapa diriku.”
+      </p>
+
+      <div class="buttons">
+
+        <a href="#sample" class="btn-primary">
+          Baca Prolog
+        </a>
+
+        <a href="#tentang" class="btn-outline">
+          Tentang Buku
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-right">
+
+      <!-- GANTI COVER -->
+      <img src="Book Cover 1.jpg" class="book-cover">
+
+    </div>
+
+  </section>
+
+  <!-- TENTANG -->
+  <!-- TENTANG BUKU -->
+
+<section id="tentang" class="about-book">
+
+  <div class="about-left">
+
+    <h3>Tentang Buku</h3>
+
+    <p class="synopsis">
+      “Hilang Menyentuh Dasar” menceritakan perjalanan Arka, seorang remaja yang 
+tumbuh di antara luka yang tak pernah benar-benar diberi nama. Sejak kecil, ia hidup 
+dalam ruang yang terasa asing — rumah yang tidak sepenuhnya menjadi tempat 
+pulang, keluarga yang hadir namun tak selalu terasa dekat, dan masa lalu yang 
+perlahan membentuk ketakutan dalam diam.
+Beranjak remaja, Arka mulai mengalami hal-hal yang tak ia mengerti: pingsan tanpa 
+sebab, kecemasan yang datang tiba-tiba, hingga perasaan terlepas dari dirinya 
+sendiri. Ia mencoba bertahan dengan caranya — menyimpan semuanya sendiri, 
+berpura-pura baik-baik saja, dan mencari arti “normal” di tengah kekacauan 
+pikirannya.
+Di luar itu, ia tetap menjalani hidup seperti biasa: berteman, jatuh cinta, bermimpi, 
+dan mengejar masa depan. Namun setiap langkahnya selalu dibayangi oleh masa lalu 
+yang belum selesai. Hingga suatu saat, ia menemukan ketenangan di tempat yang 
+jauh dari rumah — sebuah kota yang membuatnya merasa hidup kembali, meski 
+hanya sementara.
+Perjalanan Arka bukan tentang menemukan jawaban yang pasti, melainkan tentang 
+memahami dirinya sedikit demi sedikit. Dari penolakan, kegagalan, hingga 
+keberanian untuk meminta bantuan, ia perlahan belajar bahwa tidak semua luka 
+harus hilang untuk bisa tetap hidup.
+Karena terkadang, menyentuh dasar bukanlah akhir — melainkan awal untuk belajar 
+bertahan.
+    </p>
+
+    <!-- HASHTAG -->
+
+    <div class="hashtags">
+
+      <span>#TraumaMasaKecil</span>
+      <span>#Psikologis</span>
+      <span>#Kehilangan</span>
+      <span>#InnerChild</span>
+      <span>#MentalHealth</span>
+      <span>#SelfHealing</span>
+
+    </div>
+
+    <!-- TRIGGER WARNING -->
+
+    <div class="trigger-warning">
+
+      <h4>Trigger Warning</h4>
+
+      <ul>
+        <li>Kekerasan emosional</li>
+        <li>Trauma masa kecil</li>
+        <li>Depresi</li>
+        <li>Kesepian</li>
+        <li>Percobaan bunuh diri</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- KUTIPAN -->
+
+<section class="quotes-section">
+
+  <h3>Kutipan Laut Sunyi</h3>
+
+  <div class="quote-box">
+
+    <p id="randomQuote">
+      “Beberapa luka tidak berdarah,
+      tapi tetap membuat seseorang tenggelam.”
+    </p>
+
+  </div>
+
+  <button class="quote-btn" onclick="newQuote()">
+    Kutipan Lainnya
+  </button>
+
+</section>
+
+<!-- SURAT -->
+
+<section class="letter-section">
+
+  <div class="letter-card">
+
+    <h3>Untuk Versi Kecil</h3>
+
+    <p>
+      Ada banyak hal yang tidak sempat dikatakan
+      kepada diriku yang dulu.
+    </p>
+
+    <button onclick="openLetter()" class="letter-btn">
+      Baca Surat
+    </button>
+
+  </div>
+
+</section>
+
+<!-- MODAL SURAT -->
+
+<div class="letter-modal" id="letterModal">
+
+  <div class="letter-content">
+
+    <button class="close-btn" onclick="closeLetter()">
+      ×
+    </button>
+
+    <h3>Surat Untuk Versi Kecil</h3>
+
+    <p>
+Untuk diriku yang kecil,
+
+maaf karena terlalu lama membiarkanmu tumbuh bersama rasa takut yang
+tidak pernah benar-benar hilang. Aku tahu kamu sering menahan tangis diam-diam,
+mencoba menjadi anak yang tidak merepotkan, dan belajar menyimpan semuanya 
+sendiri karena merasa tidak ada tempat yang benar-benar aman untuk bercerita. Padahal
+kamu hanya ingin didengar, dipeluk, dan diyakinkan bahwa semuanya akan 
+baik-baik saja. Ada banyak luka yang akhirnya tinggal terlalu lama di dalam dirimu 
+sampai perlahan berubah menjadi sunyi yang sulit dijelaskan.
+    </p>
+
+  </div>
+
+</div>
+
+  <!-- PLAYLIST -->
+  <section id="playlist" class="playlist">
+
+    <h3>Playlist Laut Sunyi</h3>
+
+    <iframe
+      style="border-radius:20px"
+      src="https://open.spotify.com/embed/playlist/4n6ZEsMU3bJxdwlwR4qw4Q?utm_source=generator&theme=0"
+      width="100%"
+      height="352"
+      frameBorder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+
+  </section>
+
+  <!-- SAMPLE -->
+ <section id="sample" class="sample-section">
+
+  <h3>Baca Sample</h3>
+
+  <div class="ocean-floor"></div>
+
+  <!-- BOOK -->
+
+  <div class="book-container">
+
+    <div class="book-shadow"></div>
+
+    <div class="book-page active-page" id="page1">
+      <span>Halaman 1</span>
+      <h4>Prolog</h4>
+
+      <p>
+       Hai, aku Arka.
+Aku menulis ini bukan untuk siapa-siapa — aku hanya ingin meluapkan sesuatu yang sejak lama tertahan, seperti gelombang kecil yang tak pernah benar-benar pecah di tepian.
+Dulu, setiap melihat anak-anak lain dikelilingi tawa dan perayaan, aku sering diam dan bertanya dalam hati,
+“Kapan ya giliranku?”	
+Bukan iri, mungkin cuma rindu.
+
+      </p>
+    </div>
+
+    <div class="book-page" id="page2">
+      <span>Halaman 2</span>
+
+      <p>
+        Aku remaja 19 tahun yang hobinya foto-foto,
+atau bisa dibilang seorang photographer kecil.
+Aku suka mengabadikan hal-hal sederhana —
+langit sore, jalanan sepi, bayangan di jendela,
+atau tawa orang yang mungkin tak akan kutemui lagi. 
+
+      </p>
+    </div>
+
+    <div class="book-page" id="page3">
+      <span>Halaman 3</span>
+
+      <p>
+        Ini bukan kisah tentang perpisahan orang tua,
+bukan juga tentang kehilangan besar.
+Hanya tentang seorang anak yang sejak kecil harus belajar memahami arti “bersama” di tempat yang terasa asing.
+
+      </p>
+    </div>
+
+    <div class="book-page" id="page4">
+      <span>Halaman 4</span>
+
+      <p>
+        Sejak umurku memasuki dua hingga tiga tahun, aku sudah tinggal di rumah saudaraku.
+Ayah — yang saat itu sering bepergian karena pekerjaannya — selalu membawa Ibu dan kakak-kakakku ke luar kota.
+Sementara aku… dititipkan.
+Mereka menyebutnya “sementara”, tapi di usia sekecil itu, setiap hari terasa seperti selamanya.
+
+      </p>
+    </div>
+
+    <div class="book-page" id="page5">
+      <span>Halaman 5</span>
+
+      <p>
+       Aku juga dulu suka diajak bermain warnet, atau main PS2 dan PS3 sama teman-teman seusiaku.
+Kadang aku dimarahi karena hal itu.
+Sejak kecil aku sudah kecanduan bermain game — dari pagi sampai malam, sampai-sampai ibuku sering menarik telingaku, mencubit, bahkan memukulku dengan rotan.
+Aku menangis waktu itu, tapi keesokan harinya aku tetap pergi lagi.
+Aku memang susah diatur, dan lebih suka mengikuti apa yang membuatku senang saat itu.
+
+      </p>
+    </div>
+
+    <div class="book-page" id="page6">
+      <span>Halaman 6</span>
+
+      <p>
+        Setiap hari libur, aku dan teman-temanku selalu menunggu pagi datang lebih cepat.
+Kami berlomba-lomba menjadi yang pertama sampai di warnet, berebut kursi yang dekat kipas atau layar yang paling terang.
+Kadang kami datang bahkan sebelum tempatnya buka.
+Itu rasanya seperti kebebasan kecil yang sederhana — meskipun nanti ujung-ujungnya aku tetap disusul dan dimarahi di rumah.
+
+    </div>
+
+    <div class="book-page" id="page7">
+      <span>Halaman 7</span>
+
+      <p>
+        Dan benar saja, semenjak dia mengenalkanku pada dunia bioskop, aku jadi penasaran — bagaimana semua gambar itu bisa bergerak?
+Bagaimana suara, cahaya, dan emosi bisa disatukan dalam satu cerita?
+
+      </p>
+    </div>
+
+    <div class="book-page" id="page8">
+      <span>Halaman 8</span>
+
+      <p>
+        Mungkin itu sebabnya, sampai sekarang aku masih suka berjalan tanpa arah.
+Kadang bukan karena ingin pergi ke suatu tempat, tapi karena ingin mengingat rasanya jadi anak kecil yang dulu — yang berlari di sawah tanpa takut jatuh, yang tertawa keras tanpa tahu kenapa.
+
+      </p>
+    </div>
+
+    <div class="book-page" id="page9">
+      <span>Halaman 9</span>
+
+      <p>
+        Ayah. 
+Sosok yang selalu kuingat bukan dari cara bicara, tapi dari tatapannya yang berat.
+Di rumah, ada dua dunia yang berbeda: satu penuh suara, satu lagi memilih diam. Keduanya saling bertabrakan, seperti dua arus yang tak pernah benar-benar seirama. 
+
+    </div>
+
+    <div class="book-page" id="page10">
+      <span>Halaman 10</span>
+
+      <p>
+        Ibu. 
+Ia perempuan yang, seingatku, selalu mencoba jadi baik. 
+Semua orang di rumah sebenarnya begitu — hanya saja, ada sesuatu yang perlahan menular di antara kami; sesuatu yang membuat kasih berubah bentuk, menjadi suara tinggi dan tangan yang tak lagi tahu harus ke mana. 
+
+      </p>
+    </div>
+
+  </div>
+
+  <!-- PAGE BUTTONS -->
+
+  <div class="page-navigation">
+
+    <button class="page-btn active-btn" onclick="showPage(1)">
+      01
+    </button>
+
+    <button class="page-btn" onclick="showPage(2)">
+      02
+    </button>
+
+    <button class="page-btn" onclick="showPage(3)">
+      03
+    </button>
+
+    <button class="page-btn" onclick="showPage(4)">
+      04
+    </button>
+
+    <button class="page-btn" onclick="showPage(5)">
+      05
+    </button>
+
+    <button class="page-btn" onclick="showPage(6)">
+      06
+    </button>
+
+    <button class="page-btn" onclick="showPage(7)">
+      07
+    </button>
+
+    <button class="page-btn" onclick="showPage(8)">
+      08
+    </button>
+
+    <button class="page-btn" onclick="showPage(9)">
+      09
+    </button>
+
+    <button class="page-btn" onclick="showPage(10)">
+      10
+    </button>
+
+  </div>
+
+</section>
+
+<!-- OCEAN CREATURES -->
+
+<div class="deep-ocean">
+
+  <div class="coral coral1"></div>
+  <div class="coral coral2"></div>
+  <div class="coral coral3"></div>
+
+  <div class="fish fish1">🐟</div>
+  <div class="fish fish2">🐠</div>
+  <div class="fish fish3">🦑</div>
+  <div class="fish fish4">🐋</div>
+
+</div>
+
+  <!-- BOOKMARK -->
+  <section class="bookmark-section">
+
+    <div>
+
+      <h3>Bonus Bookmark</h3>
+
+      <p>
+        Setiap pembelian buku cetak mendapatkan bookmark.
+      </p>
+
+    </div>
+
+    <!-- GANTI BOOKMARK -->
+    <img src="Ilustrator.png" class="bookmark">
+
+  </section>
+
+  <!-- BUY -->
+  <section id="beli" class="buy-section">
+
+  <h3>Miliki Bukunya</h3>
+
+  <div class="buy-container">
+
+    <!-- CETAK -->
+
+    <div class="buy-card">
+
+      <h4>Buku Cetak</h4>
+
+      <p class="price">Rp125.000</p>
+
+      <p class="desc">
+        Estimasi cetak 7 hari <br>
+        Pengiriman 1-3 hari
+      </p>
+
+      <div class="quantity-box">
+
+        <button onclick="decreaseQty()">−</button>
+
+        <span id="qty">1</span>
+
+        <button onclick="increaseQty()">+</button>
+
+      </div>
+
+      <button class="wa-btn" onclick="orderPrintedBook()">
+        Pesan Buku Cetak
+      </button>
+
+    </div>
+
+    <!-- EBOOK -->
+
+    <div class="buy-card glass">
+
+      <h4>E-Book / PDF</h4>
+
+      <p class="price">Rp65.000</p>
+
+      <p class="desc">
+        File dikirim instan via WhatsApp
+      </p>
+
+      <button class="ebook-btn" onclick="orderEbook()">
+        Pesan E-Book
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- AUTHOR -->
+  <!-- PENULIS -->
+
+<section id="penulis" class="author">
+
+  <img src="Picture1.jpg" class="author-img">
+
+  <div>
+
+    <h3>Fachri Akbar</h3>
+
+    <p>
+      Menulis untuk orang-orang
+      yang pernah merasa tidak didengar.
+    </p>
+
+    <a
+      href="https://www.instagram.com/fchryyy.a/"
+      target="_blank"
+      class="instagram-btn">
+
+      Instagram Penulis
+
+    </a>
+
+  </div>
+
+</section>
+
+  <footer>
+    © 2026 Hilang Menyentuh Dasar
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
