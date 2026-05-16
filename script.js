@@ -165,3 +165,145 @@ function closeLetter(){
   .style.display = "none";
 
 }
+/* FIX BUTTONS */
+
+window.addEventListener("load",()=>{
+
+  document.body.style.pointerEvents = "auto";
+
+});
+
+/* SMOOTH SCROLL */
+
+document.querySelectorAll('a[href^="#"]')
+.forEach(anchor => {
+
+  anchor.addEventListener("click",function(e){
+
+    e.preventDefault();
+
+    const target =
+    document.querySelector(
+      this.getAttribute("href")
+    );
+
+    if(target){
+
+      target.scrollIntoView({
+        behavior:"smooth"
+      });
+
+    }
+
+  });
+
+});
+
+/* FIX RANDOM QUOTE BUTTON */
+
+const quoteButton =
+document.querySelector(".quote-btn");
+
+if(quoteButton){
+
+  quoteButton.addEventListener("click",()=>{
+
+    newQuote();
+
+  });
+
+}
+
+/* CLOSE LETTER CLICK OUTSIDE */
+
+window.addEventListener("click",(e)=>{
+
+  const modal =
+  document.getElementById("letterModal");
+
+  if(e.target === modal){
+
+    modal.style.display = "none";
+
+  }
+
+});
+/* FIX HERO BUTTON DELAY */
+
+window.addEventListener("load",()=>{
+
+  const heroButtons =
+  document.querySelectorAll(
+    ".btn-primary, .btn-outline"
+  );
+
+  heroButtons.forEach((button)=>{
+
+    button.style.pointerEvents = "auto";
+
+    button.style.zIndex = "999";
+
+  });
+
+});
+
+/* SMOOTH SCROLL */
+
+document.querySelectorAll('a[href^="#"]')
+.forEach(anchor => {
+
+  anchor.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    const target =
+    document.querySelector(
+      this.getAttribute("href")
+    );
+
+    if(target){
+
+      target.scrollIntoView({
+        behavior:"smooth"
+      });
+
+    }
+
+  });
+
+});
+
+/* OPEN LETTER */
+
+function openLetter(){
+
+  document
+  .getElementById("letterModal")
+  .style.display = "flex";
+
+}
+
+/* CLOSE LETTER */
+
+function closeLetter(){
+
+  document
+  .getElementById("letterModal")
+  .style.display = "none";
+
+}
+
+/* CLICK OUTSIDE CLOSE */
+
+window.addEventListener("click",(e)=>{
+
+  const modal =
+  document.getElementById("letterModal");
+
+  if(e.target === modal){
+
+    closeLetter();
+
+  }
+
+});
